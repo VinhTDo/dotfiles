@@ -1,0 +1,1 @@
+require("vinhdo.config.settings")
