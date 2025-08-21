@@ -5,7 +5,7 @@ return {
 		"nvim-treesitter/nvim-treesitter"
 	},
 	opts = {
-		completions = { blink = { enabled = true } }
+		completion = { blink = { enabled = true } }
 	},
 	config = function(_, opts)
 		local markdown = require("render-markdown")
