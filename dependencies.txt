@@ -8,3 +8,4 @@ fd
 ripgrep
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
+rofi
