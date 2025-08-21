@@ -1,0 +1,10 @@
+hyprland
+hyprpaper
+jq
+neovim
+ghostty
+lua
+fd
+ripgrep
+ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
