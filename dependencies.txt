@@ -10,3 +10,7 @@ ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 rofi
 waybar
+pipewire
+pipewire-audio
+pipewire-alsa
+pipewire-pulse
