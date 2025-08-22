@@ -8,7 +8,8 @@ return {
 		indent = { enable = true },
 		ensure_installed = {
 			"lua",
-			"bash"
+			"bash",
+			"css"
 		},
 		sync_install = true,
 		auto_install = false
