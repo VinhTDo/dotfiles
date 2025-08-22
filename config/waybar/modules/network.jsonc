@@ -1,0 +1,9 @@
+{
+	"network": {
+		"interval": 1,
+		"format-wifi": "{icon}",
+		"tooltip": false,
+		"format-disconnected": "󰤭",
+		"format-icons": ["󰤯", "󰤟", "󰤨"]
+	}
+}

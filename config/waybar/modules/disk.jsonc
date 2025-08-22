@@ -1,0 +1,9 @@
+{
+	"disk": {
+		"path": "/",
+		"interval": 1,
+		"format": "{specific_used:0.1f}G / {specific_total:0.1f}G 󰗮",
+		"unit": "GB",
+		"tooltip": false
+	}
+}

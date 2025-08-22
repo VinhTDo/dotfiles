@@ -1,0 +1,7 @@
+{
+	"clock": {
+		"interval": 1,
+		"format": "{0:%d %b %Y}, {0:%T} ",
+		"tooltip": false
+	}
+}

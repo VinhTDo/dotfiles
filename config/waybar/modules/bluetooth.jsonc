@@ -1,0 +1,8 @@
+{
+	"bluetooth": {
+		"tooltip": false,
+		"format-on": "󰂯",
+		"format-off": "󰂲",
+		"format-no-controller": "󰂲"
+	}
+}
