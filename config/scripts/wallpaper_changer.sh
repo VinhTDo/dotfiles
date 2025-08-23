@@ -6,11 +6,10 @@ if [ "$#" -ne 1 ]; then
 fi
 
 THEME_NAME=$1
-THEME_DIR=$HOME/.config/themes/$THEME_NAME
+WALLPAPER_DIR=$HOME/.config/themes/${THEME_NAME}/wallpapers
 
 echo "Changing wallpaper..."
 
-WALLPAPER_DIR=$THEME_DIR/wallpapers
 CURRENT_WORKSPACE=$(hyprctl activeworkspace -j | jq ".id")
 
 case $CURRENT_WORKSPACE in

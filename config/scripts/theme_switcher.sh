@@ -6,8 +6,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 THEME_NAME=$1
-THEME_DIR=$HOME/.config/themes/$THEME_NAME
-WALLPAPER_DIR=$THEME_DIR/wallpapers
+WALLPAPER_DIR=$HOME/.config/themes/${THEME_NAME}/wallpapers
 
 hyprctl hyprpaper unload all
 
@@ -18,3 +17,4 @@ hyprctl hyprpaper preload $WALLPAPER_DIR/partial.png
 hyprctl hyprpaper preload $WALLPAPER_DIR/full.png
 
 . $HOME/.config/scripts/wallpaper_changer.sh $THEME_NAME
+. $HOME/.config/scripts/status_bar_changer.sh $THEME_NAME

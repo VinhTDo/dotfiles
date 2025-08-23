@@ -23,6 +23,7 @@ All themes are based on Agents in Zenless Zone Zero.
 | Shell | Bash *(default on Linux)* |
 | Editor | Neovim |
 | Terminal | Ghostty |
+| Status Bar | Waybar |
 | Wallpaper | Hyprpaper |
 | Font | Jetbrains Mono Nerd Font *(optional)* |
 
