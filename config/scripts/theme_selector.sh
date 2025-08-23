@@ -7,7 +7,7 @@ SELECTED_THEME=$(
 	for ICON in $ICONS_LIST;
 	do echo -en "${ICON%.*}\0icon\x1f$ICONS_DIR/$ICON\n";
 	done |
-	rofi -dmenu -p "" -show-icons
+	rofi -dmenu -p ""
 )
 
 if [ -n $SELECTED_THEME ]; then
