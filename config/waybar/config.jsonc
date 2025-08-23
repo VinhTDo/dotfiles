@@ -14,9 +14,9 @@
 		"group/i-r-primary-powerline"
     ],
     "modules-right": [
-		"group/l-secondary-powerline",
+		"group/l-primary-powerline",
 		"group/networks",
-		"group/i-l-primary-powerline",
+		"group/i-l-secondary-powerline",
 		"group/systems"
     ],
 	"include": [

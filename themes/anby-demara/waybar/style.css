@@ -60,15 +60,15 @@ button:hover {
 	padding-left: 4px;
 }
 
-#workspaces, #networks, .modules-right > *:nth-child(3) {
+#workspaces, #systems {
 	background-color: @secondaryColour;
 }
 
-#clock, #pulseaudio, #cpu, #memory, #disk, #battery {
+#clock, #bluetooth, #network {
 	color: @darkTextColour;
 }
 
-#clock, #systems {
+#clock, #networks, .modules-right > *:nth-child(3) {
 	background-color: @primaryColour;
 }
 
@@ -85,27 +85,27 @@ button:hover {
 }
 
 #l-secondary-powerline, #r-secondary-powerline,
-#i-l-primary-powerline, #i-r-primary-powerline {
+#i-l-primary-powerline, #i-r-primary-powerline,
+#i-l-secondary-powerline {
 	background: transparent;
 	min-height: 0;
 	font-size: 0;
 	margin: 0;
 }
 
-#l-secondary-powerline, #r-secondary-powerline {
-	border-bottom: 30px solid @secondaryColour;
-}
-
-#i-l-primary-powerline, #i-r-primary-powerline {
+#l-primary-powerline, #i-l-primary-powerline,
+#i-r-primary-powerline, #i-l-secondary-powerline {
 	border-bottom: 30px solid transparent;
-}
-
-#l-secondary-powerline {
-	border-left: 15px solid transparent;
 }
 
 #r-secondary-powerline {
 	border-right: 15px solid transparent;
+	border-bottom: 30px solid @secondaryColour;
+}
+
+#l-primary-powerline {
+	border-left: 15px solid transparent;
+	border-bottom: 30px solid @primaryColour;
 }
 
 #i-l-primary-powerline {
@@ -114,4 +114,8 @@ button:hover {
 
 #i-r-primary-powerline {
 	border-left: 15px solid @primaryColour;
+}
+
+#i-l-secondary-powerline {
+	border-right: 15px solid @secondaryColour;
 }
