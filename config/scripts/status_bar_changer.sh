@@ -7,12 +7,8 @@ fi
 
 THEME_NAME=$1
 STATUS_BAR_DIR=$HOME/.config/themes/${THEME_NAME}/waybar
-STYLE_FILE=$STATUS_BAR_DIR/style.css
+WAYBAR_STYLE=$([[ -d $STATUS_BAR_DIR && -e ${STATUS_BAR_DIR}/style.css ]] && echo ${STATUS_BAR_DIR}/style.css || echo $HOME/.config/waybar/style.css)
 
 killall waybar 2> /dev/null
 
-if [[ -d "$STATUS_BAR_DIR" && -e $STYLE_FILE ]]; then
-	waybar -s $STYLE_FILE &
-else
-	waybar &
-fi
+waybar -s $WAYBAR_STYLE &

@@ -10,8 +10,6 @@ WALLPAPER_DIR=$HOME/.config/themes/${THEME_NAME}/wallpapers
 
 hyprctl hyprpaper unload all
 
-sleep 0.1
-
 hyprctl hyprpaper preload $WALLPAPER_DIR/default.png
 hyprctl hyprpaper preload $WALLPAPER_DIR/partial.png
 hyprctl hyprpaper preload $WALLPAPER_DIR/full.png
