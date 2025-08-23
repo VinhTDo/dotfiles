@@ -3,16 +3,20 @@
     "position": "top",
     "height": 30,
 	"margin-top": 4,
-    "spacing": 6,
 	"reload_style_on_change": true,
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+		"group/r-secondary-powerline"
     ],
     "modules-center": [
-        "clock"
+		"group/i-l-primary-powerline",
+        "clock",
+		"group/i-r-primary-powerline"
     ],
     "modules-right": [
+		"group/l-secondary-powerline",
 		"group/networks",
+		"group/i-l-primary-powerline",
 		"group/systems"
     ],
 	"include": [
