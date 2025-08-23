@@ -25,6 +25,7 @@ All themes are based on Agents in Zenless Zone Zero.
 | Terminal | Ghostty |
 | Status Bar | Waybar |
 | Wallpaper | Hyprpaper |
+| Menu | Rofi |
 | Font | Jetbrains Mono Nerd Font *(optional)* |
 
 ## Keybindings
