@@ -1,6 +1,7 @@
 hyprland
 hyprpaper
 hyprlock
+hypridle
 jq
 neovim
 ghostty
