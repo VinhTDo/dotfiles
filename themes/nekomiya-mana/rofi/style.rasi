@@ -1,0 +1,74 @@
+* {
+	primaryColour: #f86822;
+	secondaryColour: #1c1c1c;
+	lightTextColour: #eee;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+}
+
+window {
+	width: 720px;
+	height: 360px;
+	border-radius: 6px;
+	padding: 8px;
+	background-color: @secondaryColour;
+	border: 4px;
+	border-color: @primaryColour;
+}
+
+entry, element-text {
+	color: @lightTextColour;
+}
+
+entry {
+	placeholder: "Type here";
+}
+
+inputbar {
+	orientation: horizontal;
+	padding: 4px;
+	margin: 0 6px;
+	children: ["entry"];
+}
+
+listview {
+	margin: 8px 0 0 0;
+	spacing: 4;
+	border: 0;
+	scrollbar: false;
+	columns: 4;
+	fixed-columns: true;
+	flow: horizontal;
+	layout: vertical;
+	dynamic: true;
+	reverse: false;
+	fixed-height: true;
+	fixed-columns: true;
+	padding: 10px 20px;
+}
+
+element {
+	orientation: vertical;
+	margin: 4px;
+	padding: 4px;
+	children: ["element-icon", "element-text"];
+}
+
+element-icon {
+	size: 2em;
+}
+
+element-text, element-icon {
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+}
+
+element selected.normal {
+	background-color: @primaryColour;
+	border-radius: 4px;
+}
+
+element-text selected.normal {
+	color: @secondaryColour;
+}
