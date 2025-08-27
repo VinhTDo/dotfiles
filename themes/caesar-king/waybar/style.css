@@ -1,0 +1,121 @@
+@define-color primaryColour #fde301;
+@define-color secondaryColour #1c1c1c;
+@define-color darkTextColour #000;
+@define-color lightTextColour #eee;
+
+* {
+	font-family: Jetbrains Mono, Roboto, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: @lightTextColour;
+}
+
+window#waybar {
+	background-color: transparent;
+}
+
+button {
+	box-shadow: none;
+	border: none;
+	border-radius: 0;
+}
+
+button:hover {
+	background: none;
+	box-shadow: none;
+	text-shadow: none;
+	transition: none
+}
+
+#workspaces button {
+	padding: 0 4px;
+	background-color: transparent;
+	opacity: 0.4;
+}
+
+#workspaces button.visible {
+	opacity: 1.0;
+}
+
+#workspaces button.urgent {
+	background-color: #eb4d4b;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#network,
+#bluetooth,
+#pulseaudio {
+	padding: 0 10px;
+}
+
+#workspaces {
+	padding-right: 4px;
+	padding-left: 6px;
+}
+
+#networks, #systems {
+	padding-left: 4px;
+}
+
+#workspaces, #systems {
+	background-color: @secondaryColour;
+}
+
+#clock, #bluetooth, #network {
+	color: @darkTextColour;
+}
+
+#clock, #networks, .modules-right > *:nth-child(3) {
+	background-color: @primaryColour;
+}
+
+#battery.charging {
+	color: #26a65b;
+}
+
+#battery.warning {
+	color: #f6c937;
+}
+
+#battery.critical {
+	color: #cf2c17;
+}
+
+#l-secondary-powerline, #r-secondary-powerline,
+#i-l-primary-powerline, #i-r-primary-powerline,
+#i-l-secondary-powerline {
+	background: transparent;
+	min-height: 0;
+	font-size: 0;
+	margin: 0;
+}
+
+#l-primary-powerline, #i-l-primary-powerline,
+#i-r-primary-powerline, #i-l-secondary-powerline {
+	border-bottom: 30px solid transparent;
+}
+
+#r-secondary-powerline {
+	border-right: 15px solid transparent;
+	border-bottom: 30px solid @secondaryColour;
+}
+
+#l-primary-powerline {
+	border-left: 15px solid transparent;
+	border-bottom: 30px solid @primaryColour;
+}
+
+#i-l-primary-powerline {
+	border-right: 15px solid @primaryColour;
+}
+
+#i-r-primary-powerline {
+	border-left: 15px solid @primaryColour;
+}
+
+#i-l-secondary-powerline {
+	border-right: 15px solid @secondaryColour;
+}
