@@ -22,14 +22,15 @@ All themes are based on Agents in Zenless Zone Zero.
 ```sh
 git clone https://github.com/VinhTDo/dotfiles.git ~/.dotfiles
 ```
-2. Manually symlink folders from config directory to config
+2. Manually symlink folders from config directory to ~/.config
 > [!NOTE]
-> Delete existing folders in .config folder. Exclude .bashrc and .tmux.conf
+> Delete existing folders in ~/.config. Exclude .bashrc and .tmux.conf
 ```sh
 ln -s <folder-from-dotfile> <new-symlink-path>
 ```
-3. Repeat the same from step 2, but now symlink .bashrc and .tmux.conf
-4. Symlink the themes folder as .config/themes
+3. Repeat the same from step 2, but symlink .bashrc and .tmux.conf to
+   ~/.bashrc and ~/.tmux.conf, retrospectively
+4. Symlink the themes folder as ~/.config/themes
 
 ## Dependencies
 | App | Package |
