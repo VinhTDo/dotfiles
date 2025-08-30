@@ -61,8 +61,8 @@ ln -s <folder-from-dotfile> <new-symlink-path>
 | $SUPER + DOWN | Move focus to down |
 | $SUPER + SHIFT + T | Open theme selector |
 | PRINT | Screenshot output |
-| $SUPER + [1 - 5] | Switch workspace from 1-5 |
-| $SUPER + SHIFT + [1 - 5] | Move active to workspace |
+| $SUPER + [1-5] | Switch to workspace 1-5 |
+| $SUPER + SHIFT + [1-5] | Move active to workspace 1-5 |
 
 ## Screenshots
 ![Screenshot 01](./misc/screenshots/screenshot-01.png "screenshot-01.png")
