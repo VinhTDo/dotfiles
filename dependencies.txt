@@ -16,3 +16,5 @@ pipewire
 pipewire-audio
 pipewire-alsa
 pipewire-pulse
+tmux
+fzf
