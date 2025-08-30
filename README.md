@@ -37,7 +37,10 @@ All themes are based on Agents in Zenless Zone Zero.
 (WIP)
 
 ## Screenshots
-(WIP)
+![Screenshot 01](./misc/screenshots/screenshot-01.png "screenshot-01.png")
+![Screenshot 02](./misc/screenshots/screenshot-02.png "screenshot-02.png")
+![Screenshot 03](./misc/screenshots/screenshot-03.png "screenshot-03.png")
+![Screenshot 04](./misc/screenshots/screenshot-04.png "screenshot-04.png")
 
 ## License
 This repository is licensed under the GPL v3 license.
