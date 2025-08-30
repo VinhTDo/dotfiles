@@ -19,3 +19,5 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 
 PS1="\u@\h: \W${GREEN}\$(parse_git_branch)${CLEAR} \$ "
+
+bind '"\C-f":". $HOME/.config/scripts/tmux_sessioniser.sh\n"'

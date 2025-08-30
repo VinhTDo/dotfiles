@@ -29,6 +29,8 @@ All themes are based on Agents in Zenless Zone Zero.
 | Lock Screen | Hyprlock |
 | Idle Management | Hypridle |
 | Font | Jetbrains Mono Nerd Font *(optional)* |
+| Sessioniser | Tmux |
+| Fuzzy Finder | Fzf |
 
 ## Keybindings
 (WIP)
