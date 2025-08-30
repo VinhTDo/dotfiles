@@ -25,6 +25,7 @@ All themes are based on Agents in Zenless Zone Zero.
 | Terminal | Ghostty |
 | Status Bar | Waybar |
 | Wallpaper | Hyprpaper |
+| Screenshot | Hyprshot |
 | Menu | Rofi |
 | Lock Screen | Hyprlock |
 | Idle Management | Hypridle |

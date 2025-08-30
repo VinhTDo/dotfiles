@@ -2,6 +2,7 @@ hyprland
 hyprpaper
 hyprlock
 hypridle
+hyprshot
 jq
 neovim
 ghostty
