@@ -25,6 +25,7 @@ git clone https://github.com/VinhTDo/dotfiles.git ~/.dotfiles
 2. Manually symlink child folders from config directory to ~/.config.
 > [!NOTE]
 > Delete existing folders in ~/.config.
+
 > [!IMPORTANT]
 > Do not symlink the .tmux.conf and .bashrc yet.
 ```sh
