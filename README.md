@@ -7,31 +7,35 @@ for your setup.
 All themes are based on Agents in Zenless Zone Zero.
 
 > [!NOTE]
-> This configuration only works, if you're on an [ArchLinux](https://archlinux.org/)-based distro.
+> This configuration only works, if you're on an [ArchLinux](https://archlinux.org/).
 
 ## Features
-* Fast theme switcher to switch themes
-* Built-in TMUX sessioniser to switch projects
-* Built-in Neovim custom folder as an IDE
-* Custom themes for users to modify
-* Screenshot feature of an entire montior
+* Fast theme switcher to switch themes.
+* Productive and efficient TMUX sessioniser to switch projects.
+* Custom Neovim configuration as an IDE.
+* Custom themes for users to modify,
+* Screenshot feature to capture the entire monitor.
 
 ## Getting Started
-### Installation
-1. Clone the repository
+### Manual Installation
+1. Clone the repository.
 ```sh
 git clone https://github.com/VinhTDo/dotfiles.git ~/.dotfiles
 ```
-2. Manually symlink child folders from config directory to ~/.config
+2. Manually symlink child folders from config directory to ~/.config.
 > [!NOTE]
 > Delete existing folders in ~/.config.
-> Ignore .bashrc and .tmux.conf for the next step.
+> [!IMPORTANT]
+> Do not symlink the .tmux.conf and .bashrc yet.
 ```sh
-ln -s <folder-from-dotfile> <new-symlink-path>
+ln -s <folder-from-dotfile> <new-symlink-path-to-.config> # Example: ln -s $HOME/.dotfiles/config/hypr $HOME/.config/hypr
 ```
-3. Repeat the same from step 2, but symlink .bashrc and .tmux.conf to
-   ~/.bashrc and ~/.tmux.conf, retrospectively
-4. Symlink the themes folder as ~/.config/themes
+3. Symlink .bashrc and .tmux.conf from config directory as ~/.bashrc and ~/.tmux.conf, retrospectively.
+4. Symlink the themes folder as ~/.config/themes.
+5. Grant permission of each scripts in ~/.config/scripts as executable.
+```sh
+chmod +x <script-file>
+```
 
 ## Dependencies
 | App | Package |
