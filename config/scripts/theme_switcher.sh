@@ -14,5 +14,5 @@ hyprctl hyprpaper preload $WALLPAPER_DIR/default.png
 hyprctl hyprpaper preload $WALLPAPER_DIR/partial.png
 hyprctl hyprpaper preload $WALLPAPER_DIR/full.png
 
-. $HOME/.config/scripts/wallpaper_changer.sh $THEME_NAME
-. $HOME/.config/scripts/status_bar_changer.sh $THEME_NAME
+$HOME/.config/scripts/wallpaper_changer.sh $THEME_NAME
+$HOME/.config/scripts/status_bar_changer.sh $THEME_NAME

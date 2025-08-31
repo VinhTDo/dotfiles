@@ -6,7 +6,7 @@ if [[ ! -d $PROJECT_DIR ]]; then
 	exit 1
 fi
 
-SELECTED_PROJECT=$(find $PROJECT_DIR -mindepth 1 -maxdepth 1 -type d| fzf)
+SELECTED_PROJECT=$(find $PROJECT_DIR -mindepth 1 -maxdepth 1 -type d | fzf)
 
 if [[ -z $SELECTED_PROJECT ]]; then
 	exit 0

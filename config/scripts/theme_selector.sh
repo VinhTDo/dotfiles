@@ -16,7 +16,7 @@ SELECTED_THEME=$(
 )
 
 if [ -n $SELECTED_THEME ]; then
-	. $HOME/.config/scripts/theme_switcher.sh $SELECTED_THEME
+	$HOME/.config/scripts/theme_switcher.sh $SELECTED_THEME
 else
 	echo "Cancel selecting..."
 	exit

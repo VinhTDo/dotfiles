@@ -9,4 +9,4 @@ SELECTED_THEME=$(
 
 THEME_NAME=$(basename $SELECTED_THEME)
 
-. $HOME/.config/scripts/theme_switcher.sh $THEME_NAME
+$HOME/.config/scripts/theme_switcher.sh $THEME_NAME
