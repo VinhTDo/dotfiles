@@ -73,6 +73,7 @@ chmod +x <script-file>
 | PRINT | Screenshot output |
 | $SUPER + [1-5] | Switch to workspace 1-5 |
 | $SUPER + SHIFT + [1-5] | Move active to workspace 1-5 |
+| $SUPER + ESCAPE | Open wlogout |
 
 ## Screenshots
 ![Screenshot 01](./misc/screenshots/screenshot-01.png "screenshot-01.png")
