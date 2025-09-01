@@ -51,7 +51,7 @@ chmod +x <script-file>
 | Menu | Rofi |
 | Lock Screen | Hyprlock |
 | Idle Management | Hypridle |
-| Font | Jetbrains Mono Nerd Font *(optional)* |
+| Font | Jetbrains Mono Nerd Font |
 | Sessioniser | Tmux |
 | Fuzzy Finder | Fzf |
 | Notifications | Dunst |
