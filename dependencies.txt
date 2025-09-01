@@ -19,4 +19,4 @@ pipewire-alsa
 pipewire-pulse
 tmux
 fzf
-dunstc
+dunst
