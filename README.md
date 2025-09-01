@@ -54,6 +54,7 @@ chmod +x <script-file>
 | Font | Jetbrains Mono Nerd Font *(optional)* |
 | Sessioniser | Tmux |
 | Fuzzy Finder | Fzf |
+| Notifications | Dunstc |
 
 ## Keybindings
 | Keymap | Description |
