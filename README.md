@@ -41,20 +41,21 @@ chmod +x <script-file>
 ## Dependencies
 | App | Package |
 | -------------- | --------------- |
-| Windows Manager | Hyprland |
-| Shell | Bash *(default on Linux)* |
-| Editor | Neovim |
-| Terminal | Ghostty |
-| Status Bar | Waybar |
-| Wallpaper | Hyprpaper |
-| Screenshot | Hyprshot |
-| Menu | Rofi |
-| Lock Screen | Hyprlock |
-| Idle Management | Hypridle |
-| Font | Jetbrains Mono Nerd Font |
-| Sessioniser | Tmux |
-| Fuzzy Finder | Fzf |
-| Notifications | Dunst |
+| Windows Manager | hyprland |
+| Shell | bash *(default on Linux)* |
+| Editor | neovim |
+| Terminal | ghostty |
+| Status Bar | waybar |
+| Wallpaper | hyprpaper |
+| Screenshot | hyprshot |
+| Menu | rofi |
+| Lockscreen | hyprlock |
+| Idle Management | hypridle |
+| Font | jetbrains mono nerd font |
+| Sessioniser | tmux |
+| Fuzzy Finder | fzf |
+| Notifications | dunst |
+| Logout Menu | wlogout |
 
 ## Keybindings
 | Keymap | Description |
@@ -78,6 +79,7 @@ chmod +x <script-file>
 ![Screenshot 02](./misc/screenshots/screenshot-02.png "screenshot-02.png")
 ![Screenshot 03](./misc/screenshots/screenshot-03.png "screenshot-03.png")
 ![Screenshot 04](./misc/screenshots/screenshot-04.png "screenshot-04.png")
+![Screenshot 05](./misc/screenshots/screenshot-05.png "screenshot-05.png")
 
 ## License
 This repository is licensed under the GPL v3 license.

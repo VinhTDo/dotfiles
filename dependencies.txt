@@ -20,3 +20,4 @@ pipewire-pulse
 tmux
 fzf
 dunst
+wlogout

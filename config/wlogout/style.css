@@ -1,0 +1,87 @@
+@define-color selectedColour #c9cacf;
+@define-color backgroundColour #20253a;
+@define-color borderColour #2b324a;
+
+* {
+	background-image: none;
+	box-shadow: none;
+	font-size: 14px;
+	font-family: Jetbrains Mono, Roboto, Helvetica, Arial, sans-serif;
+}
+
+window {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+button {
+	border-radius: 2px;
+	border-color: @borderColour;
+	text-decoration-color: #fff;
+	outline-style: none;
+	color: #fff;
+	background-color: @backgroundColour;
+	border-style: solid;
+	margin: 2px;
+	border-width: 8px;
+	border-bottom-width: 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.9) inset;
+}
+
+button:focus, button:active {
+	background-color: @selectedColour;
+	text-decoration-color: @backgroundColour;
+	outline-style: none;
+	color: @backgroundColour;
+}
+
+#lock {
+	background-image: image(url("../misc/icons/wlogout/lock.png"));
+}
+
+#lock:active, #lock:focus {
+	background-image: image(url("../misc/icons/wlogout/lock-highlighted.png"));
+}
+
+#logout {
+	background-image: image(url("../misc/icons/wlogout/logout.png"));
+}
+
+#logout:active, #logout:focus {
+	background-image: image(url("../misc/icons/wlogout/logout-highlighted.png"));
+}
+
+#suspend {
+	background-image: image(url("../misc/icons/wlogout/suspend.png"));
+}
+
+#suspend:active, #suspend:focus {
+	background-image: image(url("../misc/icons/wlogout/suspend-highlighted.png"));
+}
+
+#hibernate {
+	background-image: image(url("../misc/icons/wlogout/hibernate.png"));
+}
+
+#hibernate:active, #hibernate:focus {
+	background-image: image(url("../misc/icons/wlogout/hibernate-highlighted.png"));
+}
+
+#shutdown {
+	background-image: image(url("../misc/icons/wlogout/shutdown.png"));
+}
+
+#shutdown:active, #shutdown:focus {
+	background-image: image(url("../misc/icons/wlogout/shutdown-highlighted.png"));
+}
+
+#reboot {
+	background-image: image(url("../misc/icons/wlogout/reboot.png"));
+}
+
+#reboot:active, #reboot:focus {
+	background-image: image(url("../misc/icons/wlogout/reboot-highlighted.png"));
+}
+
