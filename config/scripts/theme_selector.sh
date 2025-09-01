@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ICONS_DIR=$HOME/.config/misc/theme-icons
+ICONS_DIR=$HOME/.config/misc/icons/themes
 ICONS_LIST=$(ls -1 $ICONS_DIR)
 
 CURRENT_THEME_DIRS=($(hyprctl hyprpaper listactive))
