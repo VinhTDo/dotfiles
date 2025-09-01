@@ -9,7 +9,8 @@ return {
 		ensure_installed = {
 			"lua",
 			"bash",
-			"css"
+			"css",
+			"rust"
 		},
 		sync_install = true,
 		auto_install = false

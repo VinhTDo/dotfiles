@@ -28,7 +28,7 @@ return {
 	},
 	opts = {
 		automatic_enable = false,
-		ensure_installed = { "lua_ls" },
+		ensure_installed = { "lua_ls", "rust_analyzer" },
 		servers = {
 			lua_ls = {
 				settings = {
@@ -38,7 +38,8 @@ return {
 						diagnostics = { globals = { "vim" } }
 					}
 				}
-			}
+			},
+			rust_analyzer = {}
 		}
 	},
 	config = function (_, opts)
