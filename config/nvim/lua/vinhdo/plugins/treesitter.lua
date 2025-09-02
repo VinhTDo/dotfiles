@@ -7,10 +7,8 @@ return {
 		highlight = { enable = true },
 		indent = { enable = true },
 		ensure_installed = {
-			"lua",
-			"bash",
-			"css",
-			"rust"
+			"lua", "bash", "css", "rust",
+			"c"
 		},
 		sync_install = true,
 		auto_install = false
