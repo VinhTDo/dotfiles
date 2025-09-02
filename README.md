@@ -26,7 +26,7 @@ git clone https://github.com/VinhTDo/dotfiles.git ~/.dotfiles
 ```sh
 cd ~/.dotfiles
 ```
-3. Grant permission from ~/.dotfiles/install.sh as executable.
+3. Grant permission from install.sh as executable.
 ```sh
 chmod +x install.sh
 ```
@@ -34,22 +34,23 @@ chmod +x install.sh
 ```sh
 ./install.sh
 ```
-5. Manually symlink folders from config directory to ~/.config.
+### Setup
+1. Manually symlink folders from config directory to ~/.config.
 > [!NOTE]
 > Delete existing folders in ~/.config.
 ```sh
 ln -s <folder-from-.dotfiles> <symlink-path-to-.config> # Example: ln -s ~/.dotfiles/config/hypr ~/.config/hypr
 ```
-6. Symlink .bashrc and .tmux.conf as ~/.bashrc and ~/.tmux.conf, retrospectively.
+2. Symlink .bashrc and .tmux.conf as ~/.bashrc and ~/.tmux.conf, retrospectively.
 ```sh
 ln -s ~/.dotfiles/config/.bashrc ~/.bashrc
 ln -s ~/.dotfiles/config/.tmux.conf ~/.tmux.conf
 ```
-7. Symlink themes folder as ~/.config/themes.
+3. Symlink themes folder as ~/.config/themes.
 ```sh
 ln -s ~/.dotfiles/themes ~/.config/themes
 ```
-8. Grant permission of each scripts in ~/.config/scripts as executable.
+4. Grant permission of each scripts in ~/.config/scripts as executable.
 ```sh
 chmod +x <script-file>
 ```
