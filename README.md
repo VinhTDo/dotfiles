@@ -30,27 +30,11 @@ cd ~/.dotfiles
 ```sh
 chmod +x install.sh
 ```
-4. Run install.sh to install dependencies.
+4. Run install.sh
 ```sh
 ./install.sh
 ```
-### Setup
-1. Manually symlink folders from config directory to ~/.config.
-> [!NOTE]
-> Delete existing folders in ~/.config.
-```sh
-ln -s <folder-from-.dotfiles> <symlink-path-to-.config> # Example: ln -s ~/.dotfiles/config/hypr ~/.config/hypr
-```
-2. Symlink .bashrc and .tmux.conf as ~/.bashrc and ~/.tmux.conf, retrospectively.
-```sh
-ln -s ~/.dotfiles/config/.bashrc ~/.bashrc
-ln -s ~/.dotfiles/config/.tmux.conf ~/.tmux.conf
-```
-3. Symlink themes folder as ~/.config/themes.
-```sh
-ln -s ~/.dotfiles/themes ~/.config/themes
-```
-4. Grant permission of each scripts in ~/.config/scripts as executable.
+5. Grant permissions for each scripts in ~/.config/scripts as executable.
 ```sh
 chmod +x <script-file>
 ```

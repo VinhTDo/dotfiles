@@ -50,6 +50,8 @@ check_pacman_packages() {
 	done
 
 	if [[ -n ${MISSING_PACKAGES[@]} ]]; then
+		echo -e "${GREEN}Installing missing pacman packages...${CLEAR}"
+		sleep 1
 		sudo pacman -S ${MISSING_PACKAGES[@]} --noconfirm
 	fi
 }
@@ -67,8 +69,62 @@ check_aur_packages() {
 	done
 
 	if [[ -n ${MISSING_PACKAGES[@]} ]]; then
+		echo -e "${GREEN}Installing missing AUR packages...${CLEAR}"
 		${AUR_PACKAGE_MANAGER} -S ${MISSING_PACKAGES[@]} --noconfirm --skipreview
 	fi
+}
+
+symlink_dotfiles() {
+	CONFIG_DOTFILE_DIR=$HOME/.dotfiles/config
+	THEME_DOTFILE_DIR=$HOME/.dotfiles/themes
+	MISC_DOTFILE_DIR=$HOME/.dotfiles/misc
+
+	OUTPUT_DIR=$HOME/.config
+
+	for DIRECTORY in $CONFIG_DOTFILE_DIR/*; do
+		DIRECTORY_NAME=$(basename $DIRECTORY)
+
+		if [ -L $OUTPUT_DIR/$DIRECTORY_NAME ] && [ -e $OUTPUT_DIR/$DIRECTORY_NAME ]; then
+			echo -e "${GREEN}Symlink already exists.${CLEAR}"
+		else
+			echo -e "${GREEN}Creating symlink for $DIRECTORY_NAME${CLEAR}"
+			ln -s $CONFIG_DOTFILE_DIR/$DIRECTORY_NAME $OUTPUT_DIR/$DIRECTORY_NAME
+			echo -e "${GREEN}$DIRECTORY_NAME symlink has been created.${CLEAR}"
+		fi
+	done
+
+	DIRECTORY_NAME=$(basename $THEME_DOTFILE_DIR)
+
+	if [ -L $OUTPUT_DIR/$DIRECTORY_NAME ] && [ -e $OUTPUT_DIR/$DIRECTORY_NAME ]; then
+		echo -e "${GREEN}Symlink already exists.${CLEAR}"
+	else
+		echo -e "${GREEN}Creating symlink for $DIRECTORY_NAME${CLEAR}"
+		ln -s $THEME_DOTFILE_DIR $OUTPUT_DIR/$DIRECTORY_NAME
+		echo -e "${GREEN}$DIRECTORY_NAME symlink has been created.${CLEAR}"
+	fi
+
+	DIRECTORY_NAME=$(basename $MISC_DOTFILE_DIR)
+
+	if [ -L $OUTPUT_DIR/$DIRECTORY_NAME ] && [ -e $OUTPUT_DIR/$DIRECTORY_NAME ]; then
+		echo -e "${GREEN}Symlink already exists.${CLEAR}"
+	else
+		echo -e "${GREEN}Creating symlink for $DIRECTORY_NAME${CLEAR}"
+		ln -s $MISC_DOTFILE_DIR $OUTPUT_DIR/$DIRECTORY_NAME
+		echo -e "${GREEN}$DIRECTORY_NAME symlink has been created.${CLEAR}"
+	fi
+
+	HIDDEN_FILES=$(ls -A $CONFIG_DOTFILE_DIR | grep "^\.")
+
+	for FILE in $HIDDEN_FILES; do
+		if [ -L $HOME/$FILE ] && [ -e $HOME/$FILE ]; then
+			echo -e "${GREEN}Symlink already exists.${CLEAR}"
+		else
+			echo -e "${GREEN}Creating symlink for $FILE${CLEAR}"
+			ln -s $CONFIG_DOTFILE_DIR/$FILE $HOME/$FILE
+			echo -e "${GREEN}$FILE symlink has been created.${CLEAR}"
+		fi
+	done
+
 }
 
 is_installed() {
@@ -82,3 +138,8 @@ sleep 1
 
 check_pacman_packages
 check_aur_packages
+
+echo -e "\n${GREEN}Symlinking dotfiles...${CLEAR}\n"
+sleep 1
+
+symlink_dotfiles
