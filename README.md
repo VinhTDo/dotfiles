@@ -34,19 +34,24 @@ chmod +x install.sh
 ```sh
 ./install.sh
 ```
-5. Manually symlink child folders from config directory to ~/.config.
+5. Manually symlink folders from config directory to ~/.config.
 > [!NOTE]
 > Delete existing folders in ~/.config.
-> [!IMPORTANT]
-> Do not symlink the .tmux.conf and .bashrc yet.
 ```sh
-ln -s <folder-from-dotfile> <new-symlink-path-to-.config> # Example: ln -s $HOME/.dotfiles/config/hypr $HOME/.config/hypr
+ln -s <folder-from-.dotfiles> <symlink-path-to-.config> # Example: ln -s ~/.dotfiles/config/hypr ~/.config/hypr
 ```
-6. Symlink .bashrc and .tmux.conf from config directory as ~/.bashrc and ~/.tmux.conf, retrospectively.
-7. Symlink the themes folder as ~/.config/themes.
+6. Symlink .bashrc and .tmux.conf as ~/.bashrc and ~/.tmux.conf, retrospectively.
+```sh
+ln -s ~/.dotfiles/config/.bashrc ~/.bashrc
+ln -s ~/.dotfiles/config/.tmux.conf ~/.tmux.conf
+```
+7. Symlink themes folder as ~/.config/themes.
+```sh
+ln -s ~/.dotfiles/themes ~/.config/themes
+```
 8. Grant permission of each scripts in ~/.config/scripts as executable.
 ```sh
-chmod +x <script-file-in-scripts-directory>
+chmod +x <script-file>
 ```
 
 ## Dependencies
