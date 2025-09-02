@@ -77,7 +77,7 @@ is_installed() {
 
 check_initialisation
 
-echo -e "${GREEN}Checking packages...${CLEAR}\n"
+echo -e "${GREEN}Checking dependencies...${CLEAR}\n"
 sleep 1
 
 check_pacman_packages

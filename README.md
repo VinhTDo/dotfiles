@@ -30,7 +30,7 @@ cd ~/.dotfiles
 ```sh
 chmod +x install.sh
 ```
-4. Run install.sh.
+4. Run install.sh to install dependencies.
 ```sh
 ./install.sh
 ```
