@@ -17,25 +17,36 @@ All themes are based on Agents in Zenless Zone Zero.
 * Screenshot feature to capture the entire monitor.
 
 ## Getting Started
-### Manual Installation
+### Installation
 1. Clone the repository.
 ```sh
 git clone https://github.com/VinhTDo/dotfiles.git ~/.dotfiles
 ```
-2. Manually symlink child folders from config directory to ~/.config.
+2. Change directory to ~/.dotfiles.
+```sh
+cd ~/.dotfiles
+```
+3. Grant permission from ~/.dotfiles/install.sh as executable.
+```sh
+chmod +x install.sh
+```
+4. Run install.sh.
+```sh
+./install.sh
+```
+5. Manually symlink child folders from config directory to ~/.config.
 > [!NOTE]
 > Delete existing folders in ~/.config.
-
 > [!IMPORTANT]
 > Do not symlink the .tmux.conf and .bashrc yet.
 ```sh
 ln -s <folder-from-dotfile> <new-symlink-path-to-.config> # Example: ln -s $HOME/.dotfiles/config/hypr $HOME/.config/hypr
 ```
-3. Symlink .bashrc and .tmux.conf from config directory as ~/.bashrc and ~/.tmux.conf, retrospectively.
-4. Symlink the themes folder as ~/.config/themes.
-5. Grant permission of each scripts in ~/.config/scripts as executable.
+6. Symlink .bashrc and .tmux.conf from config directory as ~/.bashrc and ~/.tmux.conf, retrospectively.
+7. Symlink the themes folder as ~/.config/themes.
+8. Grant permission of each scripts in ~/.config/scripts as executable.
 ```sh
-chmod +x <script-file>
+chmod +x <script-file-in-scripts-directory>
 ```
 
 ## Dependencies
