@@ -57,6 +57,7 @@ chmod +x <script-file>
 | Fuzzy Finder | fzf |
 | Notifications | dunst |
 | Logout Menu | wlogout |
+| Desktop Portal | xdg-desktop-portal-hyprland |
 
 ## Keybindings
 | Keymap | Description |
