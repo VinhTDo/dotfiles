@@ -26,15 +26,12 @@ git clone https://github.com/VinhTDo/dotfiles.git ~/.dotfiles
 ```sh
 cd ~/.dotfiles
 ```
-3. Grant permission from install.sh as executable.
+3. Grant permission from install.sh as an executable, and run this script.
 ```sh
 chmod +x install.sh
-```
-4. Run install.sh
-```sh
 ./install.sh
 ```
-5. Grant permissions for each scripts in ~/.config/scripts as executable.
+4. Grant permissions for each scripts in ~/.config/scripts as executable.
 ```sh
 chmod +x <script-file>
 ```
