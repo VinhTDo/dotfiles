@@ -28,7 +28,7 @@ return {
 	},
 	opts = {
 		automatic_enable = false,
-		ensure_installed = { "lua_ls", "rust_analyzer" },
+		ensure_installed = { "lua_ls", "rust_analyzer", "clangd" },
 		servers = {
 			lua_ls = {
 				settings = {
@@ -39,7 +39,8 @@ return {
 					}
 				}
 			},
-			rust_analyzer = {}
+			rust_analyzer = {},
+			clangd = {}
 		}
 	},
 	config = function (_, opts)

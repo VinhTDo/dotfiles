@@ -12,7 +12,7 @@ PACMAN_PACKAGES=(
 	"lua" "fd" "ripgrep" "ttf-jetbrains-mono"
 	"ttf-jetbrains-mono-nerd" "rofi" "waybar" "pipewire"
 	"pipewire-audio" "pipewire-alsa" "pipewire-pulse" "tmux" "fzf"
-	"dunst" "xdg-desktop-portal-hyprland"
+	"dunst" "xdg-desktop-portal-hyprland" "unzip"
 )
 AUR_PACKAGES=("wlogout")
 AUR_PACKAGE_MANAGER=paru
