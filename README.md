@@ -7,7 +7,7 @@ for your setup.
 All themes are based on Agents in Zenless Zone Zero.
 
 > [!NOTE]
-> This configuration only works, if you're on an [ArchLinux](https://archlinux.org/).
+> This configuration only works, if you're on [ArchLinux](https://archlinux.org/).
 
 ## Features
 * Fast theme switcher to switch themes.
