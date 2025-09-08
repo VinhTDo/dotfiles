@@ -35,6 +35,10 @@ chmod +x install.sh
 ```sh
 chmod +x <script-file>
 ```
+5. Reboot your system.
+```sh
+systemctl reboot
+```
 
 ## Dependencies
 | App | Package |

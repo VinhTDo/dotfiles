@@ -9,10 +9,9 @@ CLEAR="\033[00m"
 PACMAN_PACKAGES=(
 	"hyprland" "hyprpaper" "hyprlock" "hypridle"
 	"hyprshot" "jq" "neovim" "ghostty"
-	"lua" "fd" "ripgrep" "ttf-jetbrains-mono"
-	"ttf-jetbrains-mono-nerd" "rofi" "waybar" "pipewire"
-	"pipewire-audio" "pipewire-alsa" "pipewire-pulse" "tmux" "fzf"
-	"dunst" "xdg-desktop-portal-hyprland" "unzip"
+	"lua" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "rofi"
+	"waybar" "tmux" "fzf" "dunst"
+	"xdg-desktop-portal-hyprland" "unzip"
 )
 AUR_PACKAGES=("wlogout")
 AUR_PACKAGE_MANAGER=paru
