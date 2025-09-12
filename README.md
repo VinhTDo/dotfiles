@@ -51,6 +51,7 @@ systemctl reboot
 | Wallpaper | hyprpaper |
 | Screenshot | hyprshot |
 | Menu | rofi |
+| Browser | firefox |
 | Lockscreen | hyprlock |
 | Idle Management | hypridle |
 | Font | jetbrains mono nerd font |

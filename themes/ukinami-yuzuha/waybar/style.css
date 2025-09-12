@@ -36,10 +36,6 @@ button:hover {
 	opacity: 1.0;
 }
 
-#workspaces button.urgent {
-	background-color: #eb4d4b;
-}
-
 #clock,
 #battery,
 #cpu,
