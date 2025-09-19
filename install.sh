@@ -84,7 +84,7 @@ symlink_dotfiles() {
 		DIRECTORY_NAME=$(basename $DIRECTORY)
 
 		if [ -L $OUTPUT_DIR/$DIRECTORY_NAME ] && [ -e $OUTPUT_DIR/$DIRECTORY_NAME ]; then
-			echo -e "${GREEN}Symlink already exists.${CLEAR}"
+			echo -e "${GREEN}${DIRECTORY_NAME}: Symlink already exists.${CLEAR}"
 		else
 			echo -e "${GREEN}Creating symlink for $DIRECTORY_NAME${CLEAR}"
 			ln -s $CONFIG_DOTFILE_DIR/$DIRECTORY_NAME $OUTPUT_DIR/$DIRECTORY_NAME
@@ -95,7 +95,7 @@ symlink_dotfiles() {
 	DIRECTORY_NAME=$(basename $THEME_DOTFILE_DIR)
 
 	if [ -L $OUTPUT_DIR/$DIRECTORY_NAME ] && [ -e $OUTPUT_DIR/$DIRECTORY_NAME ]; then
-		echo -e "${GREEN}Symlink already exists.${CLEAR}"
+		echo -e "${GREEN}${DIRECTORY_NAME}: Symlink already exists.${CLEAR}"
 	else
 		echo -e "${GREEN}Creating symlink for $DIRECTORY_NAME${CLEAR}"
 		ln -s $THEME_DOTFILE_DIR $OUTPUT_DIR/$DIRECTORY_NAME
@@ -105,7 +105,7 @@ symlink_dotfiles() {
 	DIRECTORY_NAME=$(basename $MISC_DOTFILE_DIR)
 
 	if [ -L $OUTPUT_DIR/$DIRECTORY_NAME ] && [ -e $OUTPUT_DIR/$DIRECTORY_NAME ]; then
-		echo -e "${GREEN}Symlink already exists.${CLEAR}"
+		echo -e "${GREEN}${DIRECTORY_NAME}: Symlink already exists.${CLEAR}"
 	else
 		echo -e "${GREEN}Creating symlink for $DIRECTORY_NAME${CLEAR}"
 		ln -s $MISC_DOTFILE_DIR $OUTPUT_DIR/$DIRECTORY_NAME
@@ -116,7 +116,7 @@ symlink_dotfiles() {
 
 	for FILE in $HIDDEN_FILES; do
 		if [ -L $HOME/$FILE ] && [ -e $HOME/$FILE ]; then
-			echo -e "${GREEN}Symlink already exists.${CLEAR}"
+			echo -e "${GREEN}${FILE}: Symlink already exists.${CLEAR}"
 		else
 			echo -e "${GREEN}Creating symlink for $FILE${CLEAR}"
 			ln -s $CONFIG_DOTFILE_DIR/$FILE $HOME/$FILE
