@@ -11,8 +11,9 @@ All themes are based on Agents in Zenless Zone Zero.
 
 ## Features
 * Fast theme switcher to switch themes.
+* Fast application menu.
 * Productive and efficient TMUX sessioniser to switch projects.
-* Custom Neovim configuration as an IDE.
+* Custom-made Neovim as an IDE.
 * Custom themes for users to modify,
 * Screenshot feature to capture the entire monitor.
 
@@ -21,27 +22,20 @@ All themes are based on Agents in Zenless Zone Zero.
 1. Clone the repository.
 ```sh
 git clone https://github.com/VinhTDo/dotfiles.git ~/.dotfiles
-```
-2. Change directory to ~/.dotfiles.
-```sh
 cd ~/.dotfiles
 ```
-3. Grant permission from install.sh as an executable, and run this script.
+2. Grant install.sh as an executable, and run this script.
 ```sh
 chmod +x install.sh
 ./install.sh
 ```
-4. Grant permissions for each scripts in ~/.config/scripts as executable.
-```sh
-chmod +x <script-file>
-```
-5. Reboot your system.
+3. Reboot your system.
 ```sh
 systemctl reboot
 ```
 
 ## Dependencies
-| App | Package |
+| Type | Package |
 | -------------- | --------------- |
 | Windows Manager | hyprland |
 | Shell | bash *(default on Linux)* |
@@ -53,13 +47,12 @@ systemctl reboot
 | Menu | rofi |
 | Browser | firefox |
 | Lockscreen | hyprlock |
-| Idle Management | hypridle |
+| Idle Daemon | hypridle |
 | Font | jetbrains mono nerd font |
 | Sessioniser | tmux |
 | Fuzzy Finder | fzf |
 | Notifications | dunst |
 | Logout Menu | wlogout |
-| Desktop Portal | xdg-desktop-portal-hyprland |
 
 ## Keybindings
 | Keymap | Description |

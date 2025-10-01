@@ -11,7 +11,7 @@ PACMAN_PACKAGES=(
 	"hyprshot" "jq" "neovim" "ghostty"
 	"lua" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "rofi"
 	"waybar" "tmux" "fzf" "dunst"
-	"xdg-desktop-portal-hyprland" "unzip" "firefox"
+	"xdg-desktop-portal-hyprland" "firefox"
 )
 AUR_PACKAGES=("wlogout")
 AUR_PACKAGE_MANAGER=paru
@@ -126,6 +126,22 @@ symlink_dotfiles() {
 
 }
 
+convert_script_to_executable() {
+	SCRIPT_DIRECTORY=$HOME/.dotfiles/config/scripts
+
+	for FILE in $SCRIPT_DIRECTORY/*; do
+		FILENAME=$(basename $FILE)
+
+		if [ -x $FILE ] && [ -e $FILE ]; then
+			echo -e "${GREEN}${FILENAME}: Already an executable.${CLEAR}"
+		else
+			echo -e "${GREEN}Convert as executable for $FILENAME${CLEAR}"
+			chmod +x $FILE
+			echo -e "${GREEN}$FILENAME is converted as executable.${CLEAR}"
+		fi
+	done
+}
+
 is_installed() {
 	pacman -Qq "$1" > /dev/null 2>&1
 }
@@ -134,11 +150,13 @@ check_initialisation
 
 echo -e "${GREEN}Checking dependencies...${CLEAR}\n"
 sleep 1
-
 check_pacman_packages
 check_aur_packages
 
 echo -e "\n${GREEN}Symlinking dotfiles...${CLEAR}\n"
 sleep 1
-
 symlink_dotfiles
+
+echo -e "\n${GREEN}Converting scripts as executable...${CLEAR}\n"
+sleep 1
+convert_script_to_executable
