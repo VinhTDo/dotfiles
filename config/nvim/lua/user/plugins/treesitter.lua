@@ -6,10 +6,7 @@ return {
 	opts = {
 		highlight = { enable = true },
 		indent = { enable = true },
-		ensure_installed = {
-			"lua", "bash", "css", "rust",
-			"c"
-		},
+		ensure_installed = { "lua", "bash" },
 		sync_install = true,
 		auto_install = false
 	},
