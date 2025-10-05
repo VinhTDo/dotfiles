@@ -6,6 +6,10 @@ return {
 		{
 			"saghen/blink.cmp",
 			version = "1.*",
+			dependencies = {
+				{ "L3MON4D3/LuaSnip", version="v2.*" },
+				"rafamadriz/friendly-snippets"
+			},
 			opts = {
 				fuzzy = { implementation = "lua" },
 				keymap = { preset = "default" },
@@ -17,20 +21,25 @@ return {
 						auto_show = true,
 						auto_show_delay_ms = 500
 					},
-					ghost_text = { enabled = true }
-				}
+					ghost_text = { enabled = true },
+				},
+				sources = {
+					default = { "lsp", "path", "snippets", "buffer" }
+				},
+				snippets = { preset = "luasnip" }
 			},
 			config = function(_, opts)
 				require("blink.cmp").setup(opts)
 			end
-		},
-		"rafamadriz/friendly-snippets"
+		}
 	},
 	opts = {
 		automatic_enable = false,
-		ensure_installed = { "lua_ls" },
+		ensure_installed = { "lua_ls", "rust_analyzer", "clangd" },
 		servers = {
 			lua_ls = {
+				cmd = { "lua-language-server" },
+				filetypes = { "lua" },
 				settings = {
 					Lua = {
 						workspace = { library = vim.api.nvim_get_runtime_file("", true) },
@@ -40,17 +49,17 @@ return {
 				}
 			},
 			rust_analyzer = {},
-			clangd = {}
+			clangd = { filetypes = { "c", "cpp" } }
 		}
 	},
 	config = function (_, opts)
-		local lspconfig = require("lspconfig")
 		local blink = require("blink.cmp")
 		require("mason-lspconfig").setup(opts)
 
 		for server, config in pairs(opts.servers) do
 			config.capabilities = blink.get_lsp_capabilities(config.capabilities)
-			lspconfig[server].setup(config)
+			vim.lsp.config(server, config)
+			vim.lsp.enable(server)
 		end
 	end
 }
