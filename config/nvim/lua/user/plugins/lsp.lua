@@ -35,7 +35,7 @@ return {
 	},
 	opts = {
 		automatic_enable = false,
-		ensure_installed = { "lua_ls", "rust_analyzer", "clangd" },
+		ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "asm_lsp" },
 		servers = {
 			lua_ls = {
 				cmd = { "lua-language-server" },
@@ -48,8 +48,9 @@ return {
 					}
 				}
 			},
-			rust_analyzer = {},
-			clangd = { filetypes = { "c", "cpp" } }
+			rust_analyzer = { filetypes = { "rs" } },
+			clangd = { filetypes = { "c", "cpp" } },
+			asm_lsp = { filetypes = { "asm" } }
 		}
 	},
 	config = function (_, opts)
