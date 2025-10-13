@@ -50,7 +50,7 @@ return {
 			},
 			rust_analyzer = { filetypes = { "rs" } },
 			clangd = { filetypes = { "c", "cpp" } },
-			asm_lsp = { filetypes = { "asm" } }
+			asm_lsp = { filetypes = { "asm", "s" } }
 		}
 	},
 	config = function (_, opts)
