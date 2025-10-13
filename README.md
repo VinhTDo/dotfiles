@@ -10,11 +10,11 @@ All themes are based on Agents in Zenless Zone Zero.
 > This configuration only works, if you're on [ArchLinux](https://archlinux.org/).
 
 ## Features
-* Fast theme switcher to switch themes.
-* Fast application menu.
-* Productive and efficient TMUX sessioniser to switch projects.
+* Theme switcher to switch themes.
+* Stylised application menu.
+* TMUX sessioniser to switch projects.
 * Custom-made Neovim as an IDE.
-* Custom themes for users to modify,
+* Custom themes for users to modify.
 * Screenshot feature to capture the entire monitor.
 
 ## Getting Started
