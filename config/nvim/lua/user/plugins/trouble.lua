@@ -5,7 +5,15 @@ return {
 		trouble.setup({})
 
 		vim.keymap.set("n", "<leader>tt", function()
-			trouble.toggle()
+			trouble.toggle({
+				mode = "diagnostics",
+				focus = false,
+				preview = {
+					type = "split",
+					relative = "win",
+					position = "right"
+				}
+			})
 		end)
 	end
 }
