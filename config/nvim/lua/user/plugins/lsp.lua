@@ -37,7 +37,8 @@ return {
 		automatic_enable = false,
 		ensure_installed = {
 			"lua_ls", "rust_analyzer", "clangd", "asm_lsp",
-			"omnisharp"
+			"omnisharp", "pylsp", "ts_ls", "cssls",
+			"html"
 		},
 		servers = {
 			lua_ls = {
@@ -54,7 +55,11 @@ return {
 			rust_analyzer = { filetypes = { "rs" } },
 			clangd = { filetypes = { "c", "cpp" } },
 			asm_lsp = { filetypes = { "asm", "s" } },
-			omnisharp = { filetypes = { "cs" } }
+			omnisharp = { filetypes = { "cs" } },
+			pylsp = { filetypes = { "py" } },
+			ts_ls = { filetypes = { "js", "ts" } },
+			cssls = { filetypes = { "css", "scss", "less" } },
+			html = { filetypes = { "html" } }
 		}
 	},
 	config = function (_, opts)
