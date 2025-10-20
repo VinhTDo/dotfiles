@@ -38,7 +38,7 @@ return {
 		ensure_installed = {
 			"lua_ls", "rust_analyzer", "clangd", "asm_lsp",
 			"omnisharp", "pylsp", "ts_ls", "cssls",
-			"html"
+			"html", "jdtls"
 		},
 		servers = {
 			lua_ls = {
@@ -59,7 +59,8 @@ return {
 			pylsp = { filetypes = { "py" } },
 			ts_ls = { filetypes = { "js", "ts" } },
 			cssls = { filetypes = { "css", "scss", "less" } },
-			html = { filetypes = { "html" } }
+			html = { filetypes = { "html" } },
+			jdtls = { filetypes = { "java" } }
 		}
 	},
 	config = function (_, opts)
