@@ -9,7 +9,7 @@ return {
 		ensure_installed = {
 			"lua", "bash", "css", "rust",
 			"c", "html", "javascript", "cpp",
-			"python", "asm"
+			"python", "asm", "c_sharp"
 		},
 		sync_install = true,
 		auto_install = false

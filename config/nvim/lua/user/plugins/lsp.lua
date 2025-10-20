@@ -35,7 +35,10 @@ return {
 	},
 	opts = {
 		automatic_enable = false,
-		ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "asm_lsp" },
+		ensure_installed = {
+			"lua_ls", "rust_analyzer", "clangd", "asm_lsp",
+			"omnisharp"
+		},
 		servers = {
 			lua_ls = {
 				cmd = { "lua-language-server" },
@@ -50,7 +53,8 @@ return {
 			},
 			rust_analyzer = { filetypes = { "rs" } },
 			clangd = { filetypes = { "c", "cpp" } },
-			asm_lsp = { filetypes = { "asm", "s" } }
+			asm_lsp = { filetypes = { "asm", "s" } },
+			omnisharp = { filetypes = { "cs" } }
 		}
 	},
 	config = function (_, opts)
