@@ -38,7 +38,7 @@ return {
 		ensure_installed = {
 			"lua_ls", "rust_analyzer", "clangd", "asm_lsp",
 			"csharp_ls", "pylsp", "ts_ls", "cssls",
-			"html", "jdtls"
+			"html", "jdtls", "intelephense", "gopls"
 		},
 		servers = {
 			lua_ls = {
@@ -60,7 +60,9 @@ return {
 			ts_ls = { filetypes = { "js", "ts" } },
 			cssls = { filetypes = { "css", "scss", "less" } },
 			html = { filetypes = { "html" } },
-			jdtls = { filetypes = { "java" } }
+			jdtls = { filetypes = { "java" } },
+			intelephense = { filetypes = { "php" } },
+			gopls = { filetypes = { "go" } }
 		}
 	},
 	config = function (_, opts)
