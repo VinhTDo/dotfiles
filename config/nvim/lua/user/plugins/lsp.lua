@@ -38,7 +38,8 @@ return {
 		ensure_installed = {
 			"lua_ls", "rust_analyzer", "clangd", "asm_lsp",
 			"csharp_ls", "pylsp", "ts_ls", "cssls",
-			"html", "jdtls", "intelephense", "gopls"
+			"html", "jdtls", "intelephense", "gopls",
+			"docker_language_server"
 		},
 		servers = {
 			lua_ls = {
@@ -62,7 +63,8 @@ return {
 			html = { filetypes = { "html" } },
 			jdtls = { filetypes = { "java" } },
 			intelephense = { filetypes = { "php" } },
-			gopls = { filetypes = { "go" } }
+			gopls = { filetypes = { "go" } },
+			docker_language_server = {}
 		}
 	},
 	config = function (_, opts)

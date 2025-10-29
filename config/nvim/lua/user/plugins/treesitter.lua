@@ -10,7 +10,7 @@ return {
 			"lua", "bash", "css", "rust",
 			"c", "html", "javascript", "cpp",
 			"python", "asm", "c_sharp", "java",
-			"php", "go"
+			"php", "go", "dockerfile"
 		},
 		sync_install = true,
 		auto_install = false
