@@ -16,7 +16,14 @@ return {
 				appearance = { nerd_font_variant = "mono" },
 				completion = {
 					trigger = { show_on_keyword = true },
-					menu = { auto_show = true },
+					menu = {
+						auto_show = true,
+						draw = {
+							columns = {
+								{ "kind_icon", "label", "label_description", "kind", gap = 1 }
+							}
+						}
+					},
 					documentation = {
 						auto_show = true,
 						auto_show_delay_ms = 500
@@ -26,8 +33,10 @@ return {
 				sources = {
 					default = { "lsp", "path", "snippets", "buffer" }
 				},
-				snippets = { preset = "luasnip" }
+				snippets = { preset = "luasnip" },
+				signature = { enabled = true }
 			},
+			opts_extend = { "sources.default" },
 			config = function(_, opts)
 				require("blink.cmp").setup(opts)
 			end
