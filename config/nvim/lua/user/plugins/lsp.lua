@@ -48,7 +48,7 @@ return {
 			"lua_ls", "rust_analyzer", "clangd", "asm_lsp",
 			"csharp_ls", "pylsp", "ts_ls", "cssls",
 			"html", "jdtls", "intelephense", "gopls",
-			"docker_language_server"
+			"docker_language_server", "bashls"
 		},
 		servers = {
 			lua_ls = {
@@ -72,7 +72,8 @@ return {
 			jdtls = { filetypes = { "java" } },
 			intelephense = { filetypes = { "php" } },
 			gopls = { filetypes = { "go" } },
-			docker_language_server = { filetypes = { "Dockerfile" } }
+			docker_language_server = { filetypes = { "Dockerfile" } },
+			bashls = { filetypes = { "sh" } }
 		}
 	},
 	config = function (_, opts)
@@ -84,5 +85,20 @@ return {
 			vim.lsp.config(server, config)
 			vim.lsp.enable(server)
 		end
+		vim.api.nvim_create_autocmd("LspAttach", {
+			callback = function (event)
+				local options = { buffer = event.buf }
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, options)
+				vim.keymap.set("n", "grr", vim.lsp.buf.references, options)
+				vim.keymap.set("n", "grn", vim.lsp.buf.rename, options)
+				vim.keymap.set("n", "gra", vim.lsp.buf.code_action, options)
+				vim.keymap.set("n", "grd", vim.lsp.buf.declaration, options)
+				vim.keymap.set("n", "gri", vim.lsp.buf.implementation, options)
+				vim.keymap.set("n", "grt", vim.lsp.buf.type_definition, options)
+				vim.keymap.set({ "i", "s" }, "<C-h>", vim.lsp.buf.signature_help, options)
+				vim.keymap.set("n", "K", vim.lsp.buf.hover, options)
+				vim.keymap.set("n", "gws", vim.lsp.buf.workspace_symbol, options)
+			end
+		})
 	end
 }
