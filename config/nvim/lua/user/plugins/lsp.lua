@@ -62,12 +62,12 @@ return {
 					}
 				}
 			},
-			rust_analyzer = { filetypes = { "rs" } },
+			rust_analyzer = { filetypes = { "rust" } },
 			clangd = { filetypes = { "c", "cpp" } },
 			asm_lsp = { filetypes = { "asm", "s" } },
 			csharp_ls = { filetypes = { "cs" } },
-			pylsp = { filetypes = { "py" } },
-			ts_ls = { filetypes = { "js", "ts" } },
+			pylsp = { filetypes = { "python" } },
+			ts_ls = { filetypes = { "javascript", "typescript" } },
 			cssls = { filetypes = { "css", "scss", "less" } },
 			html = { filetypes = { "html" } },
 			jdtls = { filetypes = { "java" } },
