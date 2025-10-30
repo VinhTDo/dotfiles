@@ -11,7 +11,7 @@ PACMAN_PACKAGES=(
 	"hyprshot" "jq" "neovim" "ghostty"
 	"lua" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "rofi"
 	"waybar" "tmux" "fzf" "dunst"
-	"xdg-desktop-portal-hyprland" "firefox"
+	"xdg-desktop-portal-hyprland" "firefox" "htop"
 )
 AUR_PACKAGES=("wlogout")
 AUR_PACKAGE_MANAGER=paru
