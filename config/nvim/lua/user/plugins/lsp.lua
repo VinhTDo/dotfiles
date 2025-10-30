@@ -52,7 +52,6 @@ return {
 		},
 		servers = {
 			lua_ls = {
-				cmd = { "lua-language-server" },
 				filetypes = { "lua" },
 				settings = {
 					Lua = {
@@ -67,7 +66,7 @@ return {
 			asm_lsp = { filetypes = { "asm", "s" } },
 			csharp_ls = { filetypes = { "cs" } },
 			pylsp = { filetypes = { "python" } },
-			ts_ls = { filetypes = { "javascript", "typescript" } },
+			ts_ls = { filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.jsx" } },
 			cssls = { filetypes = { "css", "scss", "less" } },
 			html = { filetypes = { "html" } },
 			jdtls = { filetypes = { "java" } },
