@@ -72,7 +72,7 @@ return {
 			jdtls = { filetypes = { "java" } },
 			intelephense = { filetypes = { "php" } },
 			gopls = { filetypes = { "go" } },
-			docker_language_server = {}
+			docker_language_server = { filetypes = { "Dockerfile" } }
 		}
 	},
 	config = function (_, opts)
