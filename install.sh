@@ -87,8 +87,8 @@ symlink_dotfiles() {
 			echo -e "${GREEN}${DIRECTORY_NAME}: Symlink already exists.${CLEAR}"
 		else
 			echo -e "${GREEN}Creating symlink for $DIRECTORY_NAME${CLEAR}"
-			rm -rf $OUTPUT_DIR/$DIRECTORY_NAME
-			ln -s $CONFIG_DOTFILE_DIR/$DIRECTORY_NAME $OUTPUT_DIR/$DIRECTORY_NAME
+			rm -r $OUTPUT_DIR/$DIRECTORY_NAME 2> /dev/null
+			ln -s $CONFIG_DOTFILE_DIR/$DIRECTORY_NAME $OUTPUT_DIR/$DIRECTORY_NAME 2> /dev/null
 			echo -e "${GREEN}$DIRECTORY_NAME symlink has been created.${CLEAR}"
 		fi
 	done
@@ -99,8 +99,8 @@ symlink_dotfiles() {
 		echo -e "${GREEN}${DIRECTORY_NAME}: Symlink already exists.${CLEAR}"
 	else
 		echo -e "${GREEN}Creating symlink for $DIRECTORY_NAME${CLEAR}"
-		rm -rf $OUTPUT_DIR/$DIRECTORY_NAME
-		ln -s $THEME_DOTFILE_DIR $OUTPUT_DIR/$DIRECTORY_NAME
+		rm -r $OUTPUT_DIR/$DIRECTORY_NAME 2> /dev/null
+		ln -s $THEME_DOTFILE_DIR $OUTPUT_DIR/$DIRECTORY_NAME 2> /dev/null
 		echo -e "${GREEN}$DIRECTORY_NAME symlink has been created.${CLEAR}"
 	fi
 
@@ -110,8 +110,8 @@ symlink_dotfiles() {
 		echo -e "${GREEN}${DIRECTORY_NAME}: Symlink already exists.${CLEAR}"
 	else
 		echo -e "${GREEN}Creating symlink for $DIRECTORY_NAME${CLEAR}"
-		rm -rf $OUTPUT_DIR/$DIRECTORY_NAME
-		ln -s $MISC_DOTFILE_DIR $OUTPUT_DIR/$DIRECTORY_NAME
+		rm -r $OUTPUT_DIR/$DIRECTORY_NAME 2> /dev/null
+		ln -s $MISC_DOTFILE_DIR $OUTPUT_DIR/$DIRECTORY_NAME 2> /dev/null
 		echo -e "${GREEN}$DIRECTORY_NAME symlink has been created.${CLEAR}"
 	fi
 
@@ -122,8 +122,8 @@ symlink_dotfiles() {
 			echo -e "${GREEN}${FILE}: Symlink already exists.${CLEAR}"
 		else
 			echo -e "${GREEN}Creating symlink for $FILE${CLEAR}"
-			rm -rf $HOME/$FILE
-			ln -s $CONFIG_DOTFILE_DIR/$FILE $HOME/$FILE
+			rm -r $HOME/$FILE 2> /dev/null
+			ln -s $CONFIG_DOTFILE_DIR/$FILE $HOME/$FILE 2> /dev/null
 			echo -e "${GREEN}$FILE symlink has been created.${CLEAR}"
 		fi
 	done
@@ -140,7 +140,7 @@ convert_script_to_executable() {
 			echo -e "${GREEN}${FILENAME}: Already an executable.${CLEAR}"
 		else
 			echo -e "${GREEN}Convert as executable for $FILENAME${CLEAR}"
-			chmod +x $FILE
+			chmod +x $FILE 2> /dev/null
 			echo -e "${GREEN}$FILENAME is converted as executable.${CLEAR}"
 		fi
 	done
