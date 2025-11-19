@@ -40,7 +40,7 @@ chmod +x install.sh
 systemctl reboot
 ```
 
-## Dependencies
+## Applications
 | Type | Package |
 | -------------- | --------------- |
 | Windows Manager | hyprland |
