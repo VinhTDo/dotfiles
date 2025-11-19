@@ -7,11 +7,10 @@ BLUE="\033[34m"
 CLEAR="\033[00m"
 
 PACMAN_PACKAGES=(
-	"hyprland" "hyprpaper" "hyprlock" "hypridle"
-	"hyprshot" "jq" "neovim" "ghostty"
-	"lua" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "rofi"
-	"waybar" "tmux" "fzf" "dunst"
-	"xdg-desktop-portal-hyprland" "firefox" "htop"
+	"hyprpaper" "hyprlock" "hypridle" "hyprshot"
+	"jq" "neovim" "lua" "ttf-jetbrains-mono"
+	"ttf-jetbrains-mono-nerd" "rofi" "waybar" "tmux"
+	"fzf" "dunst" "xdg-desktop-portal-hyprland" "htop"
 )
 AUR_PACKAGES=("wlogout")
 AUR_PACKAGE_MANAGER=paru

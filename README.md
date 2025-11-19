@@ -18,6 +18,14 @@ All themes are based on Agents in Zenless Zone Zero.
 * Screenshot feature to capture the entire monitor.
 
 ## Getting Started
+> [!IMPORTANT]
+> Ensure the following packages were installed.
+* hyprland
+* firefox
+* ghostty
+* base-devel
+* git
+
 ### Installation
 1. Clone the repository.
 ```sh
