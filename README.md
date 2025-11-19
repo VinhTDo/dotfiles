@@ -20,9 +20,9 @@ All themes are based on Agents in Zenless Zone Zero.
 ## Getting Started
 > [!IMPORTANT]
 > Ensure the following packages were installed.
-```sh
-hyprland firefox ghostty base-devel git
-```
+> ```sh
+> hyprland firefox ghostty base-devel git
+> ```
 
 ### Installation
 1. Clone the repository.
