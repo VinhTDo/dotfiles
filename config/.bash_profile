@@ -15,3 +15,7 @@ fi
 if [[ -d $HOME/.config/composer && -d $HOME/.config/composer/vendor && -d $HOME/.config/composer/vendor/bin ]]; then
 	export PATH=$HOME/.config/composer/vendor/bin:$PATH
 fi
+
+if [ -e /usr/bin/google-chrome-stable ]; then
+	export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+fi
