@@ -20,6 +20,6 @@ if [ -e /usr/bin/google-chrome-stable ]; then
 	export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 fi
 
-if [ -d /opt/android-sdk/emulator ]; then
-	export PATH=/opt/android-sdk/emulator:$PATH
+if [ -d $ANDROID_HOME/emulator ]; then
+	export PATH=$ANDROID_HOME/emulator:$PATH
 fi
