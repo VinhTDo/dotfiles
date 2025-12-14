@@ -21,10 +21,9 @@ return {
 					program = "${file}",
 					pythonPath = function ()
 						local cwd = vim.fn.getcwd()
-						if vim.fn.executable(cwd .. "/venv/bin/python") == 1 then
-							return cwd .. "/venv/bin/python"
-						elseif vim.fn.executable(cwd .. "/.venv/bin/python") == 1 then
-							return cwd .. "/.venv/bin/python"
+						local target_path = cwd .. "/.venv/bin/python"
+						if vim.fn.executable(target_path) == 1 then
+							return target_path
 						else
 							return "/usr/bin/python"
 						end
