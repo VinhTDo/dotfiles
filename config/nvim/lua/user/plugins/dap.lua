@@ -2,7 +2,9 @@ return {
 	"jay-babu/mason-nvim-dap.nvim",
 	dependencies = {
 		"mason-org/mason.nvim",
-		"mfussenegger/nvim-dap"
+		"mfussenegger/nvim-dap",
+		"rcarriga/nvim-dap-ui",
+		"nvim-neotest/nvim-nio"
 	},
 	opts = {
 		ensure_installed = { "python" },
@@ -37,11 +39,12 @@ return {
 		require("mason-nvim-dap").setup(opts)
 
 		local dap = require("dap")
-		local widgets = require("dap.ui.widgets")
-		local sidebar = widgets.sidebar(
-			widgets.scopes,
-			{ number = true, wrap = false }
-		)
+		local dap_ui = require("dapui")
+		dap_ui.setup({
+			controls = {
+				enabled = false
+			}
+		})
 		vim.api.nvim_set_hl(
 			0,
 			"DapBreakpoint",
@@ -53,26 +56,26 @@ return {
 			"DapBreakpoint",
 			{ text = "", texthl = "DapBreakpoint", numhl = "DapBreakpoint" }
 		)
-		vim.keymap.set("n", "<leader>b", function ()
+		vim.keymap.set("n", "<leader>bb", function ()
 			dap.toggle_breakpoint()
 		end)
-		vim.keymap.set("n", "<leader>sb", function ()
-			sidebar.toggle()
+		vim.keymap.set("n", "<leader>bu", function ()
+			dap_ui.toggle()
 		end)
-		vim.keymap.set("n", "<F8>", function ()
-			dap.step_over()
-		end)
-		vim.keymap.set("n", "<F9>", function ()
-			dap.step_into()
+		vim.keymap.set("n", "<leader>be", function ()
+			dap_ui.eval()
 		end)
 		vim.keymap.set("n", "<F10>", function ()
-			dap.step_out()
+			dap.step_over()
 		end)
 		vim.keymap.set("n", "<F11>", function ()
-			dap.continue()
+			dap.step_into()
 		end)
 		vim.keymap.set("n", "<F12>", function ()
-			dap.run_last()
+			dap.step_out()
+		end)
+		vim.keymap.set("n", "<F5>", function ()
+			dap.continue()
 		end)
 
 		dap.configurations = opts.daps
