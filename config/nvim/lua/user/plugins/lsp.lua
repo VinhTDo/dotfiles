@@ -48,7 +48,7 @@ return {
 			"lua_ls", "rust_analyzer", "clangd", "asm_lsp",
 			"csharp_ls", "pylsp", "ts_ls", "cssls",
 			"html", "jdtls", "intelephense", "gopls",
-			"dockerls", "docker_compose_language_service", "bashls"
+			"dockerls", "bashls"
 		},
 		servers = {
 			lua_ls = {
