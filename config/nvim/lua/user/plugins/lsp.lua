@@ -48,7 +48,7 @@ return {
 			"lua_ls", "rust_analyzer", "clangd", "asm_lsp",
 			"csharp_ls", "pylsp", "ts_ls", "cssls",
 			"html", "jdtls", "intelephense", "gopls",
-			"docker_language_server", "bashls"
+			"dockerls", "docker_compose_language_service", "bashls"
 		},
 		servers = {
 			lua_ls = {
@@ -72,7 +72,7 @@ return {
 			jdtls = { filetypes = { "java" } },
 			intelephense = { filetypes = { "php" } },
 			gopls = { filetypes = { "go" } },
-			docker_language_server = { filetypes = { "Dockerfile" } },
+			dockerls = { filetypes = { "dockerfile" } },
 			bashls = { filetypes = { "sh" } }
 		}
 	},
