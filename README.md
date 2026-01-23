@@ -1,4 +1,8 @@
 # Zenless Zone Zero Dotfiles for Hyprland
+
+> [!IMPORTANT]
+> This repository is archived and won't be maintained in the future.
+
 A custom-made environment based on the theme of Zenless Zone Zero.
 
 These dotfiles are highly customisable, designed to give you full control
